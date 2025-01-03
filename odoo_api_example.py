@@ -154,7 +154,7 @@ models = xmlrpc.client.ServerProxy(f'{url}/xmlrpc/2/object')
 
 
 
-# # Assuming you are already authenticated and have db, uid, and password values set
+
 # titles = models.execute_kw(db, uid, password, 'estate.property', 'search_read', 
 #                            [[['city_id', '=', 'Yangon']]])
 # print(f"Titles: {titles}")
