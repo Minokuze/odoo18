@@ -3,7 +3,6 @@ import { Button } from 'primereact/button';
 import MenuSide from './MenuSide';
 import SearchBox from './SearchBox';
 import SettingsPage from './SettingsPage'; // Import SettingsPage
-import LogoutButton from './LogoutButton'
 
 export default function Header() {
     const [isSidebarVisible, setIsSidebarVisible] = useState(true);
