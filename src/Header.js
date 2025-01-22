@@ -4,7 +4,7 @@ import MenuSide from './MenuSide';
 import SearchBox from './SearchBox';
 import SettingsPage from './SettingsPage'; // Import SettingsPage
 
-export default function Header() {
+function Header() {
     const [isSidebarVisible, setIsSidebarVisible] = useState(true);
     const [activeComponent, setActiveComponent] = useState('SearchBox'); // Default to SearchBox
 
@@ -54,22 +54,21 @@ export default function Header() {
                 </div>
 
                 <div className="flex align-items-center px-3">
-                <Button
-    icon="pi pi-sign-out" // Logout icon
-    severity="info"
-    outlined
-    className="p-button-text p-button-rounded p-button-primary"
-    style={{ backgroundColor: 'white', color: 'var(--primary-color)' }}
-/>
-
+                    <Button
+                        icon="pi pi-sign-out" // Logout icon
+                        severity="info"
+                        outlined
+                        className="p-button-text p-button-rounded p-button-primary"
+                        style={{ backgroundColor: 'white', color: 'var(--primary-color)' }}
+                    />
                 </div>
             </div>
 
             {/* Sidebar and Main Content */}
             <div className="flex">
                 <MenuSide
-                    isSidebarVisible={isSidebarVisible}
-                    showComponent={showComponent} // Pass the function to toggle active component
+                    sidebarVisibility={isSidebarVisible}
+                    toggleComponent={showComponent} // Pass the function to toggle active component
                 />
                 <div className="flex-grow-1 p-5 bg-primary-50">
                     {/* Conditionally render components based on activeComponent */}
@@ -80,3 +79,4 @@ export default function Header() {
         </div>
     );
 }
+export default Header

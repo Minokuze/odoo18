@@ -73,14 +73,6 @@ const Search = () => {
     return null;
   };
 
-  const header = () => {
-    return (
-      <div className="flex justify-content-end">
-        <DataViewLayoutOptions layout={layout} onChange={(e) => setLayout(e.value)} />
-      </div>
-    );
-  };
-
   return (
     <div className="card">
       <Toast ref={toast} />

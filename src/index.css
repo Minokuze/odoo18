@@ -1,15 +1,9 @@
-.search-bar {
-    display: flex;
-    align-items: center;
-    border-radius: 50px; /* Makes the entire container rounded */
-    padding: 2px; /* Space for the icon */
-  }
+
   
   .p-search-input {
     border-radius: 50px; /* Fully round the input field */
     padding-left: 30px; /* Ensure space for the icon inside the input field */
     width: 100%; /* Ensure the input stretches to fill the container */
-    border: none; /* Removes the border from the input to make it seamless with the container */
   }
 
   .no-background {
@@ -17,26 +11,9 @@
     box-shadow: none !important; /* Removes any box shadow */
 }
 
-.no-background:hover {
-    background-color: transparent !important;
-}
 
-/* Sidebar container with transition */
-.sidebar {
-  width: 250px; /* Sidebar default width */
-  transition: transform 0.3s ease-in-out; /* Smooth in/out effect */
-  position: relative;
-  z-index: 10;
-}
 
-/* Sidebar hidden (slide out) */
-.sidebar-hidden {
-  transform: translateX(-100%); /* Slide out to the left */
-}
 
-/* Sidebar visible (slide in) */
-.sidebar-visible {
-  transform: translateX(0); /* Fully visible */
-}
+
 
   
