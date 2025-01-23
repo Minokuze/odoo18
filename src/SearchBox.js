@@ -14,7 +14,7 @@ const Search = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [layout, setLayout] = useState('grid');
+  const [layout, setLayout] = useState('list');
   const toast = React.useRef(null);
 
   const handleSearch = async (e) => {
@@ -39,7 +39,7 @@ const Search = () => {
 
   const gridItem = (result) => {
     return (
-      <div className="col-12 sm:col-6 lg:col-12 xl:col-4 p-2" key={result.RegistrationNumber}>
+      <div className="col-12 sm:col-6 lg:col-12 xl:col-4 p-2">
         <div className="p-4 border-1 surface-border surface-card border-round justify-content-between">
           <div className="flex flex-column align-items-center gap-3 py-2">
             <div>{result.Name}</div>
@@ -85,7 +85,6 @@ const Search = () => {
                     <InputIcon className="pi pi-search" />
                     <InputText
                         id="search"
-                        value={searchTerm}
                         onChange={(e) => setSearchTerm(e.target.value)}
                         className="p-inputtext-md p-search-input"
                         placeholder="Enter Company Name..."
